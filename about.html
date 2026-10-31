@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f3f2ed" id="meta-theme-color" />
+  <meta name="description"
+    content="Découvrez le parcours, la vision et l'expertise multidisciplinaire d'Andy Tshuta — Développeur full-stack, réalisateur vidéo et photographe professionnel." />
+  <title>À propos | Andy Tshuta — Développeur, Vidéaste &amp; Photographe</title>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("portfolio-theme");
+        var theme = saved || "light";
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) { }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@0.487.0/dist/umd/lucide.min.js" defer></script>
+</head>
+
+<body>
+  <!-- Ambient Canvas & Orbs -->
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient-orb orb-one"></div>
+    <div class="ambient-orb orb-two"></div>
+    <div class="ambient-orb orb-three"></div>
+    <div class="ambient-grid"></div>
+  </div>
+
+  <!-- Floating Navigation -->
+  <nav class="floating-nav nav-always-visible is-visible" id="floating-nav" aria-label="Navigation principale">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Andy Tshuta, retour à l'accueil">
+        <span class="brand-mark">AT</span>
+        <span class="brand-name">Andy Tshuta</span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-choice" href="index.html">Accueil</a>
+        <a class="nav-choice" href="index.html#portfolio">Projets</a>
+        <a class="nav-choice is-active" href="about.html">À propos</a>
+        <a class="nav-choice" href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème" title="Basculer le thème">
+          <i data-lucide="sun" class="theme-icon-sun" aria-hidden="true"></i>
+          <i data-lucide="moon" class="theme-icon-moon" aria-hidden="true"></i>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+          <i data-lucide="menu" class="menu-open-icon" aria-hidden="true"></i>
+          <i data-lucide="x" class="menu-close-icon" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-links" id="mobile-links" hidden>
+      <a class="nav-choice" href="index.html">Accueil</a>
+      <a class="nav-choice" href="index.html#portfolio">Projets</a>
+      <a class="nav-choice is-active" href="about.html">À propos</a>
+      <a class="nav-choice" href="#contact">Contact</a>
+      <button class="mobile-theme-toggle" id="mobile-theme-toggle" aria-label="Changer de thème">
+        <i data-lucide="sun" class="theme-icon-sun" aria-hidden="true"></i>
+        <i data-lucide="moon" class="theme-icon-moon" aria-hidden="true"></i>
+        <span class="theme-label-text">Mode sombre</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main About Content -->
+  <main class="about-page-shell" id="top">
+    <div class="about-container">
+
+      <!-- ── HERO DE LA PAGE À PROPOS ── -->
+      <section class="about-hero reveal" aria-labelledby="about-hero-title">
+        <h1 class="about-hero-title" id="about-hero-title">
+          Allier la précision du code à la puissance visuelle
+        </h1>
+        <p class="about-hero-lead">
+          Je suis <strong>Andy Tshuta</strong> — Développeur Full-Stack, Réalisateur Vidéo et Photographe. Je conçois
+          des produits numériques hautement performants et des narrations visuelles immersives qui captivent et
+          convertissent.
+        </p>
+
+        <div class="about-hero-actions">
+          <a class="hero-btn hero-btn-cv" href="#" download aria-label="Télécharger mon CV">
+            <i data-lucide="download" aria-hidden="true"></i>
+            Télécharger mon CV
+          </a>
+          <a class="hero-btn hero-btn-about" href="#contact">
+            <i data-lucide="mail" aria-hidden="true"></i>
+            Me contacter
+          </a>
+          <a class="about-btn-secondary" href="index.html#portfolio">
+            <i data-lucide="folder-git-2" aria-hidden="true"></i>
+            Explorer mes réalisations
+          </a>
+        </div>
+
+        <!-- Quick Metrics Strip -->
+        <div class="about-stats-strip reveal" role="region" aria-label="Chiffres clés">
+          <div class="about-stats-header" aria-hidden="true">
+            <span class="about-stats-led"></span>
+            <span>CHIFFRES CLÉS</span>
+            <span class="about-stats-live">EN DIRECT</span>
+          </div>
+          <div class="about-stats-stage" aria-live="polite" aria-atomic="true">
+            <div class="about-stat-box is-active" aria-hidden="false">
+              <span class="about-stat-value">6+</span>
+              <span class="about-stat-label">Années d'expérience</span>
+            </div>
+            <div class="about-stat-box" aria-hidden="true">
+              <span class="about-stat-value">50+</span>
+              <span class="about-stat-label">Clients satisfaits</span>
+            </div>
+            <div class="about-stat-box" aria-hidden="true">
+              <span class="about-stat-value">15+</span>
+              <span class="about-stat-label">Projets Web &amp; Apps</span>
+            </div>
+            <div class="about-stat-box" aria-hidden="true">
+              <span class="about-stat-value">7+</span>
+              <span class="about-stat-label">Films &amp; Publicités</span>
+            </div>
+            <div class="about-stat-box" aria-hidden="true">
+              <span class="about-stat-value">100+</span>
+              <span class="about-stat-label">Photographies Pro</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SECTION BIO & PORTRAIT HISTOIRE ── -->
+      <section class="about-story-section reveal" aria-labelledby="story-title">
+        <div class="about-story-grid">
+          <!-- Left: Card Portrait -->
+          <aside class="about-portrait-card">
+            <div class="about-portrait-media" role="group" aria-roledescription="carrousel"
+              aria-label="Photos d'Andy Tshuta">
+              <div class="about-portrait-slide is-active" aria-hidden="false">
+                <img src="IMG-20260324-WA0144.jpg" alt="Andy Tshuta travaillant sur son ordinateur" fetchpriority="high" />
+              </div>
+              <div class="about-portrait-slide" aria-hidden="true">
+                <img src="IMG-20260623-WA0114.jpg" alt="Portrait d'Andy Tshuta en extérieur" loading="lazy" />
+              </div>
+              <div class="about-portrait-slide" aria-hidden="true">
+                <img src="IMG-20260713-WA0141(1).jpg" alt="Portrait d'Andy Tshuta en tenue professionnelle" loading="lazy" />
+              </div>
+              <div class="about-portrait-overlay" aria-hidden="true"></div>
+              <div class="about-portrait-dots" aria-label="Choisir une photo">
+                <button class="about-portrait-dot is-active" type="button" aria-label="Afficher la photo 1" aria-pressed="true"></button>
+                <button class="about-portrait-dot" type="button" aria-label="Afficher la photo 2" aria-pressed="false"></button>
+                <button class="about-portrait-dot" type="button" aria-label="Afficher la photo 3" aria-pressed="false"></button>
+              </div>
+              <div class="about-portrait-status">
+                <span class="status-pulsing-dot" aria-hidden="true"></span>
+                <span>Disponible pour projets</span>
+              </div>
+            </div>
+            <div class="about-portrait-body">
+              <div class="about-portrait-meta">
+                <div class="about-meta-row">
+                  <span class="about-meta-key"><i data-lucide="map-pin" aria-hidden="true"></i> Localisation</span>
+                  <span class="about-meta-val">LUBUMBASHI, RDC &amp; Remote</span>
+                </div>
+                <div class="about-meta-row">
+                  <span class="about-meta-key"><i data-lucide="briefcase" aria-hidden="true"></i> Expérience</span>
+                  <span class="about-meta-val">6+ Ans d'activité</span>
+                </div>
+                <div class="about-meta-row">
+                  <span class="about-meta-key"><i data-lucide="languages" aria-hidden="true"></i> Langues</span>
+                  <span class="about-meta-val">Français (Natif), Anglais</span>
+                </div>
+                <div class="about-meta-row">
+                  <span class="about-meta-key"><i data-lucide="clock" aria-hidden="true"></i> Disponibilité</span>
+                  <span class="about-meta-val">Temps plein / Freelance</span>
+                </div>
+              </div>
+
+              <div class="about-portrait-actions">
+                <a href="https://wa.me/243984877099" target="_blank" rel="noopener noreferrer">
+                  <i data-lucide="message-circle" aria-hidden="true"></i> WhatsApp
+                </a>
+                <button type="button" data-copy-email>
+                  <i data-lucide="copy" aria-hidden="true"></i> Copier Email
+                </button>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Right: Narrative Manifesto -->
+          <article class="about-narrative-card">
+            <span class="section-kicker">01 / HISTOIRE &amp; PARCOURS</span>
+            <h3 id="story-title">Créer des ponts entre rigueur technique et narration artistique</h3>
+
+            <p>
+              Depuis plus de six ans, j'évolue au carrefour de deux mondes que l'on oppose trop souvent : la logique
+              cartésienne de l'ingénierie logicielle et la sensibilité spontanée des arts visuels. Pour moi, ils sont
+              indissociables.
+            </p>
+            <p>
+              Un site web ou une application moderne ne peut plus se contenter d'être techniquement fonctionnelle : elle
+              doit offrir une émotion, un rythme, une fluidité qui marque la rétine. De la même façon, une vidéo
+              cinématographique ou un shooting photo haut de gamme gagne une puissance décuplée lorsqu'il est pensé avec
+              une compréhension fine des supports numériques et des comportements utilisateurs.
+            </p>
+
+            <blockquote class="about-quote">
+              « Chaque ligne de code doit servir l'expérience utilisateur, et chaque cadrage doit raconter une histoire
+              inoubliable. »
+              <cite>— Andy Tshuta</cite>
+            </blockquote>
+
+            <p>
+              Cette hybridation fait ma force. En travaillant avec moi, les marques, les startups et les créateurs
+              bénéficient d'un interlocuteur unique capable de concevoir l'architecture backend, de développer une
+              interface web ultra-réactive sous React/Next.js, de réaliser le spot vidéo publicitaire et de produire les
+              portraits éditoriaux dans un style cohérent et mémorable.
+            </p>
+
+            <!-- Highlights Grid -->
+            <div class="about-feature-carousel" aria-label="Mes points forts">
+              <div class="about-feature-grid" aria-live="polite" aria-atomic="true">
+                <div class="about-feature-box is-active" aria-hidden="false">
+                  <div class="about-feature-icon" aria-hidden="true"><i data-lucide="code-2"></i></div>
+                  <h4>Architecture Solide</h4>
+                  <p>Applications robustes, code maintenable et optimisé pour des performances de pointe.</p>
+                </div>
+                <div class="about-feature-box" aria-hidden="true">
+                  <div class="about-feature-icon" aria-hidden="true"><i data-lucide="clapperboard"></i></div>
+                  <h4>Vision Cinéma</h4>
+                  <p>Narration captivante, étalonnage soigné et direction artistique adaptée à votre identité.</p>
+                </div>
+                <div class="about-feature-box" aria-hidden="true">
+                  <div class="about-feature-icon" aria-hidden="true"><i data-lucide="aperture"></i></div>
+                  <h4>Photographie Haute Définition</h4>
+                  <p>Maîtrise de la lumière naturelle et artificielle pour des visuels percutants.</p>
+                </div>
+                <div class="about-feature-box" aria-hidden="true">
+                  <div class="about-feature-icon" aria-hidden="true"><i data-lucide="zap"></i></div>
+                  <h4>Approche Clé en Main</h4>
+                  <p>Accompagnement de bout en bout, de l'esquisse conceptuelle jusqu'à la mise en ligne.</p>
+                </div>
+              </div>
+              <div class="about-feature-dots" aria-label="Choisir un point fort">
+                <button class="is-active" type="button" aria-label="Afficher Architecture Solide" aria-pressed="true"></button>
+                <button type="button" aria-label="Afficher Vision Cinéma" aria-pressed="false"></button>
+                <button type="button" aria-label="Afficher Photographie Haute Définition" aria-pressed="false"></button>
+                <button type="button" aria-label="Afficher Approche Clé en Main" aria-pressed="false"></button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ── SECTION LES 3 PILIERS D'EXPERTISE ── -->
+      <section class="about-pillars-section reveal" aria-labelledby="pillars-title">
+        <div class="about-section-head">
+          <span class="section-kicker">02 / LES 3 PILIERS D'EXPERTISE</span>
+          <h2 id="pillars-title">Une triple compétence à forte valeur ajoutée</h2>
+          <p>Trois expertises complémentaires pour concevoir des expériences digitales complètes et percutantes.</p>
+        </div>
+
+        <div class="about-pillars-grid">
+          <!-- Pillar 1: Development -->
+          <article class="about-pillar-card pillar-card-dev reveal">
+            <div class="pillar-icon-wrap" aria-hidden="true">
+              <i data-lucide="code-2"></i>
+            </div>
+            <h3>Développement Web &amp; Mobile</h3>
+            <p>
+              Conception d'applications web modernes, d'APIs résilientes et de plateformes interactives. J'accorde une
+              attention obsessionnelle aux temps de chargement, à la maintenabilité et à l'ergonomie.
+            </p>
+            <ul class="pillar-list">
+              <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Applications Full-Stack (Next.js, React,
+                Node.js)</li>
+              <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Architectures Backend, REST APIs &amp; bases
+                SQL</li>
+              <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Applications Mobiles réactives avec React
+                Native</li>
+              <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Optimisation SEO technique &amp; score
+                Lighthouse 95+</li>
+            </ul>
+            <div class="pillar-chips">
+              <span>React</span>
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>Node.js</span>
+              <span>Laravel</span>
+              <span>PostgreSQL</span>
+            </div>
+          </article>
+
+          <!-- Pillar 2: Video -->
+          <article class="about-pillar-card pillar-card-video reveal">
+            <div class="pillar-icon-wrap" aria-hidden="true">
+              <i data-lucide="video"></i>
+            </div>
+            <h3>Production Vidéo &amp; Motion</h3>
+            <p>
+              Réalisation de films de marque, de spots promotionnels et de documentaires. De l'écriture du script
+              jusqu'au montage final avec colorimétrie cinéma et mixage sonore immersif.
+            </p>
+            <ul class="pillar-list">
+              <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Spots publicitaires &amp; capsules réseaux
+                sociaux</li>
+              <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Films institutionnels &amp; storytelling de
+                marque</li>
+              <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Clips musicaux &amp; documentaires immersifs
+              </li>
+              <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Étalonnage couleur professionnel sous DaVinci
+                Resolve</li>
+            </ul>
+            <div class="pillar-chips">
+              <span>4K Cinema</span>
+              <span>DaVinci Resolve</span>
+              <span>Premiere Pro</span>
+              <span>After Effects</span>
+              <span>Sound Design</span>
+            </div>
+          </article>
+
+          <!-- Pillar 3: Photography -->
+          <article class="about-pillar-card pillar-card-photo reveal">
+            <div class="pillar-icon-wrap" aria-hidden="true">
+              <i data-lucide="camera"></i>
+            </div>
+            <h3>Photographie Commerciale &amp; Studio</h3>
+            <p>
+              Captation photographique haute résolution pour sublimer vos produits, votre image de marque ou vos
+              événements. Traitement chromatique méticuleux pour un rendu signature.
+            </p>
+            <ul class="pillar-list">
+              <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Portraits corporate &amp; personal branding
+              </li>
+              <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Packshots produits &amp; catalogues e-commerce
+              </li>
+              <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Reportages éditoriaux &amp; événements de
+                marque</li>
+              <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Retouche numérique avancée et color grading
+                photo</li>
+            </ul>
+            <div class="pillar-chips">
+              <span>Sony Alpha</span>
+              <span>G-Master Lenses</span>
+              <span>Lightroom Pro</span>
+              <span>Photoshop</span>
+              <span>Studio Lighting</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ── SECTION PARCOURS PROFESSIONNEL ── -->
+      <section class="about-timeline-section reveal" aria-labelledby="timeline-title">
+        <div class="about-section-head">
+          <span class="section-kicker">03 / PARCOURS PROFESSIONNEL</span>
+          <h2 id="timeline-title">Une trajectoire guidée par la passion</h2>
+          <p>Les grandes étapes qui ont façonné mon expertise et mon approche multidisciplinaire.</p>
+        </div>
+
+        <div class="about-timeline-carousel" aria-label="Étapes du parcours professionnel">
+          <div class="about-timeline">
+            <div class="timeline-item is-active" role="group" aria-label="Étape 1 sur 3" aria-hidden="false">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="timeline-badge">2024 — PRÉSENT</span>
+                  <span class="timeline-role">Lead Développeur &amp; Directeur Artistique Indépendant</span>
+                </div>
+                <p>
+                  Conseil et réalisation de plateformes digitales sur mesure pour des clients internationaux. Conception
+                  d'architectures SaaS modulaires, direction de productions vidéo d'envergure et création d'identités
+                  visuelles complètes.
+                </p>
+                <div class="timeline-tags">
+                  <span>Next.js</span>
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>Direction de Création</span>
+                  <span>Production Vidéo 4K</span>
+                  <span>Consulting</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item" role="group" aria-label="Étape 2 sur 3" aria-hidden="true">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="timeline-badge">2021 — 2023</span>
+                  <span class="timeline-role">Développeur Full-Stack &amp; Réalisateur Média</span>
+                </div>
+                <p>
+                  Conception d'applications web d'analyse de données, de systèmes e-commerce sécurisés et de solutions
+                  mobiles. Réalisation de plus de 20 films commerciaux, spots institutionnels et clips musicaux.
+                </p>
+                <div class="timeline-tags">
+                  <span>React Native</span>
+                  <span>Laravel</span>
+                  <span>PostgreSQL</span>
+                  <span>DaVinci Resolve</span>
+                  <span>Adobe Premiere Pro</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item" role="group" aria-label="Étape 3 sur 3" aria-hidden="true">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="timeline-badge">2020 — 2021</span>
+                  <span class="timeline-role">Fondations Numériques &amp; Photographie Professionnelle</span>
+                </div>
+                <p>
+                  Immersion intensive dans le développement web moderne (JavaScript, HTML5/CSS3) et l'art photographique
+                  de studio. Premiers contrats de développement freelance et organisation de séances photo
+                  professionnelles.
+                </p>
+                <div class="timeline-tags">
+                  <span>JavaScript</span>
+                  <span>CSS Modernes</span>
+                  <span>Photographie Studio</span>
+                  <span>Lightroom</span>
+                  <span>Photoshop</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-dots" aria-label="Choisir une étape du parcours">
+            <button class="is-active" type="button" aria-label="Afficher 2024 à aujourd'hui" aria-pressed="true"></button>
+            <button type="button" aria-label="Afficher 2021 à 2023" aria-pressed="false"></button>
+            <button type="button" aria-label="Afficher 2020 à 2021" aria-pressed="false"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SECTION BOÎTE À OUTILS & COMPÉTENCES ── -->
+      <section class="about-skills-section reveal" aria-labelledby="skills-title">
+        <div class="about-section-head">
+          <span class="section-kicker">04 / ARSENAL TECHNIQUE</span>
+          <h2 id="skills-title">Technologies, logiciels &amp; équipement</h2>
+          <p>Une sélection d'outils et de technologies modernes maîtrisés pour mener à bien des projets ambitieux.</p>
+        </div>
+
+        <!-- Skill Category Filter Tabs -->
+        <div class="about-skill-tabs" role="tablist" aria-label="Filtrer les compétences">
+          <button class="about-skill-tab is-active" data-skill-filter="all" role="tab" aria-selected="true">Tous les
+            outils</button>
+          <button class="about-skill-tab" data-skill-filter="dev" role="tab" aria-selected="false">Développement
+            Web</button>
+          <button class="about-skill-tab" data-skill-filter="video" role="tab" aria-selected="false">Vidéo &amp;
+            Motion</button>
+          <button class="about-skill-tab" data-skill-filter="photo" role="tab" aria-selected="false">Photo &amp;
+            Graphisme</button>
+          <button class="about-skill-tab" data-skill-filter="tools" role="tab" aria-selected="false">DevOps &amp;
+            Outils</button>
+        </div>
+
+        <!-- Skills Carousel -->
+        <div class="about-skills-carousel" aria-label="Compétences">
+          <div class="about-skills-grid" aria-live="polite" aria-atomic="true">
+          <!-- 1. Next.js -->
+          <article class="skill-card" data-skill-cat="dev">
+            <div class="skill-card-top">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M9 16.5V7.5l8 10.5V7.5"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Expert</span>
+            </div>
+            <h4>Next.js &amp; React</h4>
+            <p>Rendu serveur hybride (SSR/SSG), Server Components, architecture modulaire et interfaces ultra-réactives.</p>
+          </article>
+
+          <!-- 2. TypeScript -->
+          <article class="skill-card" data-skill-cat="dev">
+            <div class="skill-card-top">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="4"/>
+                  <path d="M7 8h6m-3 0v8"/>
+                  <path d="M14 14.8c.6.6 1.3.8 2.1.8 1.1 0 1.9-.6 1.9-1.4 0-1.7-3.6-1-3.6-3 0-.9.8-1.5 1.9-1.5.8 0 1.5.3 2 .8"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Avancé</span>
+            </div>
+            <h4>TypeScript</h4>
+            <p>Typage statique rigoureux, code prévisible et réduction drastique des bugs en production.</p>
+          </article>
+
+          <!-- 3. Node.js -->
+          <article class="skill-card" data-skill-cat="dev">
+            <div class="skill-card-top">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L3 7.5v9L12 22l9-5.5v-9L12 2z"/>
+                  <path d="M12 12v10"/>
+                  <path d="M12 12L3 7.5"/>
+                  <path d="M12 12l9-4.5"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Avancé</span>
+            </div>
+            <h4>Node.js &amp; Express</h4>
+            <p>APIs REST performantes, microservices, authentification sécurisée (JWT/OAuth) et architecture async.</p>
+          </article>
+
+          <!-- 4. Laravel & PHP -->
+          <article class="skill-card" data-skill-cat="dev">
+            <div class="skill-card-top">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m12.89 1.45 8 4a2 2 0 0 1 1.11 1.79v9.52a2 2 0 0 1-1.11 1.79l-8 4a2 2 0 0 1-1.78 0l-8-4a2 2 0 0 1-1.11-1.79V7.24a2 2 0 0 1 1.11-1.79l8-4a2 2 0 0 1 1.78 0z"/>
+                  <path d="m2.32 6.16 9.68 4.84 9.68-4.84"/>
+                  <path d="M12 11v11"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Avancé</span>
+            </div>
+            <h4>Laravel &amp; PHP</h4>
+            <p>Applications backend robustes, ORM Eloquent, migrations et systèmes d'administration puissants.</p>
+          </article>
+
+          <!-- 5. Python -->
+          <article class="skill-card" data-skill-cat="dev">
+            <div class="skill-card-top">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10 2a4 4 0 0 0-4 4v2h4a2 2 0 0 1 2 2v2h2a4 4 0 0 0 4-4V6a4 4 0 0 0-4-4h-4z"/>
+                  <circle cx="9" cy="5" r="1" fill="currentColor"/>
+                  <path d="M14 22a4 4 0 0 0 4-4v-2h-4a2 2 0 0 1-2-2v-2h-2a4 4 0 0 0-4 4v2a4 4 0 0 0 4 4h4z"/>
+                  <circle cx="15" cy="19" r="1" fill="currentColor"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Maîtrisé</span>
+            </div>
+            <h4>Python</h4>
+            <p>Automatisation de scripts, manipulation de données et intégration d'APIs tierces.</p>
+          </article>
+
+          <!-- 6. PostgreSQL & MySQL -->
+          <article class="skill-card" data-skill-cat="dev">
+            <div class="skill-card-top">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                  <path d="M3 5V19A9 3 0 0 0 21 19V5"/>
+                  <path d="M3 12A9 3 0 0 0 21 12"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Avancé</span>
+            </div>
+            <h4>PostgreSQL &amp; MySQL</h4>
+            <p>Modélisation relationnelle de données, indexation, requêtes optimisées et intégrité transactionnelle.</p>
+          </article>
+
+          <!-- 7. DaVinci Resolve -->
+          <article class="skill-card" data-skill-cat="video">
+            <div class="skill-card-top">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <path d="M12 2v6m0 8v6M2 12h6m8 0h6"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Expert</span>
+            </div>
+            <h4>DaVinci Resolve Studio</h4>
+            <p>Étalonnage colorimétrique de qualité cinéma, gestion des flux ACES/RAW et mixage Fairlight.</p>
+          </article>
+
+          <!-- 8. Premiere Pro -->
+          <article class="skill-card" data-skill-cat="video">
+            <div class="skill-card-top">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="4"/>
+                  <path d="M7 8h3.5a2 2 0 0 1 0 4H7v4"/>
+                  <path d="M14 11v5m0-3a2 2 0 0 1 3-1.5"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Expert</span>
+            </div>
+            <h4>Adobe Premiere Pro</h4>
+            <p>Montage narratif fluide, rythme dynamique, synchro audio et déclinaisons tous formats.</p>
+          </article>
+
+          <!-- 9. After Effects -->
+          <article class="skill-card" data-skill-cat="video">
+            <div class="skill-card-top">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="4"/>
+                  <path d="M7 16l3-8 3 8m-5-3h4"/>
+                  <path d="M14.5 13.5a2 2 0 0 0 2 2 2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2 2 2 0 0 0-2 2h4"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Avancé</span>
+            </div>
+            <h4>After Effects</h4>
+            <p>Motion design, titres animés, compositing visuel et transitions personnalisées.</p>
+          </article>
+
+          <!-- 10. Sony Cinema -->
+          <article class="skill-card" data-skill-cat="video">
+            <div class="skill-card-top">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m22 8-6 4 6 4V8Z"/>
+                  <rect width="14" height="12" x="2" y="6" rx="2"/>
+                  <circle cx="7" cy="12" r="2"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Expert</span>
+            </div>
+            <h4>Sony Cinema &amp; 4K</h4>
+            <p>Maîtrise des profils Log (S-Log3), cadrage stabilisé, captation 4K 120fps et gestion multicaméras.</p>
+          </article>
+
+          <!-- 11. Sony Alpha & Optiques G-Master -->
+          <article class="skill-card" data-skill-cat="photo">
+            <div class="skill-card-top">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
+                  <circle cx="12" cy="13" r="4"/>
+                  <circle cx="12" cy="13" r="1.5"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Expert</span>
+            </div>
+            <h4>Matériel Photo Sony &amp; GM</h4>
+            <p>Boîtiers plein format haute définition, focales fixes lumineuses et gestion de la profondeur de champ.</p>
+          </article>
+
+          <!-- 12. Adobe Lightroom -->
+          <article class="skill-card" data-skill-cat="photo">
+            <div class="skill-card-top">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="4"/>
+                  <path d="M8 8v8h4"/>
+                  <path d="M14 11v5m0-3a2 2 0 0 1 3-1.5"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Expert</span>
+            </div>
+            <h4>Adobe Lightroom Pro</h4>
+            <p>Développement de négatifs numériques RAW, harmonisation des teintes de peau et color grading.</p>
+          </article>
+
+          <!-- 13. Adobe Photoshop -->
+          <article class="skill-card" data-skill-cat="photo">
+            <div class="skill-card-top">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="4"/>
+                  <path d="M7 8h3.5a2 2 0 0 1 0 4H7v4"/>
+                  <path d="M14 15.5c.5.4 1 .5 1.7.5 1.1 0 1.8-.5 1.8-1.2 0-1.8-3.5-.8-3.5-2.8 0-.9.8-1.5 1.8-1.5.7 0 1.3.2 1.7.5"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Avancé</span>
+            </div>
+            <h4>Adobe Photoshop</h4>
+            <p>Retouche minutieuse de texture (dodge &amp; burn), détourage fin, composition et photomontage.</p>
+          </article>
+
+          <!-- 14. Figma -->
+          <article class="skill-card" data-skill-cat="photo">
+            <div class="skill-card-top">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M8 4h8a4 4 0 0 1 0 8H8a4 4 0 0 1 0-8z"/>
+                  <path d="M8 12h8a4 4 0 0 1 0 8H8a4 4 0 0 1 0-8z"/>
+                  <path d="M8 12a4 4 0 0 0-4 4 4 4 0 0 0 4 4v-8z"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Avancé</span>
+            </div>
+            <h4>Figma &amp; UI Design</h4>
+            <p>Création de maquettes interactives, design systems cohérents et prototypage d'expériences utilisateurs.</p>
+          </article>
+
+          <!-- 15. Git & GitHub -->
+          <article class="skill-card" data-skill-cat="tools">
+            <div class="skill-card-top">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="6" x2="6" y1="3" y2="15"/>
+                  <circle cx="18" cy="6" r="3"/>
+                  <circle cx="6" cy="18" r="3"/>
+                  <path d="M18 9a9 9 0 0 1-9 9"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Expert</span>
+            </div>
+            <h4>Git &amp; GitHub Flow</h4>
+            <p>Gestion de versions d'équipe, branches de fonctionnalités, revues de code et automatisation CI/CD.</p>
+          </article>
+
+          <!-- 16. Docker & Cloud -->
+          <article class="skill-card" data-skill-cat="tools">
+            <div class="skill-card-top">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8"/>
+                  <path d="M7 10h1v1H7zm3 0h1v1h-1zm3 0h1v1h-1zm-6-3h1v1H7zm3 0h1v1h-1zm3 0h1v1h-1z"/>
+                  <path d="m16 19 2 2 4-4"/>
+                </svg>
+              </div>
+              <span class="skill-level-badge">Maîtrisé</span>
+            </div>
+            <h4>Docker &amp; Déploiement</h4>
+            <p>Conteneurisation d'environnements reproductibles, déploiements Vercel / Cloud et monitoring.</p>
+          </article>
+          </div>
+          <div class="about-skills-controls" aria-label="Navigation des compétences">
+            <button class="about-skills-previous" type="button" aria-label="Compétence précédente">‹</button>
+            <span class="about-skills-count" aria-live="off">01 / 16</span>
+            <button class="about-skills-next" type="button" aria-label="Compétence suivante">›</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SECTION VALEURS & PHILOSOPHIE ── -->
+      <section class="about-values-section reveal" aria-labelledby="values-title">
+        <div class="about-section-head">
+          <span class="section-kicker">05 / ÉTHIQUE &amp; ENGAGEMENT</span>
+          <h2 id="values-title">Les principes qui guident chaque réalisation</h2>
+          <p>Une éthique de travail exigeante pour garantir la réussite de nos collaborations.</p>
+        </div>
+
+        <div class="about-values-carousel" aria-label="Valeurs professionnelles">
+          <div class="about-values-grid" aria-live="polite" aria-atomic="true">
+          <div class="about-value-box is-active" role="group" aria-label="Valeur 1 sur 4" aria-hidden="false">
+            <div class="about-value-num">01</div>
+            <h3>Excellence &amp; Détail</h3>
+            <p>
+              Du choix d'une police à l'optimisation d'une boucle logicielle, aucun compromis n'est fait sur la qualité
+              finale du livrable.
+            </p>
+          </div>
+          <div class="about-value-box" role="group" aria-label="Valeur 2 sur 4" aria-hidden="true">
+            <div class="about-value-num">02</div>
+            <h3>Storytelling Authentique</h3>
+            <p>
+              Chaque projet possède sa propre singularité. Je m'attache à révéler l'essence de votre marque à travers un
+              univers visuel fort.
+            </p>
+          </div>
+          <div class="about-value-box" role="group" aria-label="Valeur 3 sur 4" aria-hidden="true">
+            <div class="about-value-num">03</div>
+            <h3>Transparence &amp; Écoute</h3>
+            <p>
+              Une communication limpide tout au long du projet, des retours réguliers et le respect absolu des jalons
+              convenus.
+            </p>
+          </div>
+          <div class="about-value-box" role="group" aria-label="Valeur 4 sur 4" aria-hidden="true">
+            <div class="about-value-num">04</div>
+            <h3>Impact &amp; Pérennité</h3>
+            <p>
+              Concevoir des solutions durables qui génèrent de vrais résultats pour votre marque, aujourd'hui et sur le
+              long terme.
+            </p>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SECTION CONTACT & APPEL À L'ACTION ── -->
+      <section class="contact reveal" id="contact" aria-labelledby="contact-title">
+        <div class="contact-frame" aria-hidden="true"></div>
+        <span class="section-kicker">VOUS AVEZ UN PROJET EN TÊTE ?</span>
+        <h2 id="contact-title">Collaborons ensemble</h2>
+        <div class="title-rule"></div>
+        <p class="contact-copy">
+          Disponible pour des projets de développement web, de réalisation vidéo ou de photographie.
+        </p>
+        <p class="contact-subcopy">
+          Transformons vos ambitions créatives et techniques en succès concret.
+        </p>
+
+        <div class="contact-actions">
+          <a class="contact-link" href="mailto:andytshuta01@gmail.com">
+            <i data-lucide="mail" aria-hidden="true"></i> andytshuta01@gmail.com
+          </a>
+          <a class="contact-link" href="https://wa.me/243984877099" target="_blank" rel="noopener noreferrer">
+            <i data-lucide="message-circle" class="whatsapp-icon" aria-hidden="true"></i> WhatsApp Direct
+          </a>
+        </div>
+
+        <div class="social-links" aria-label="Réseaux sociaux d'Andy Tshuta">
+          <a href="https://github.com/andytshuta01-web" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+            title="GitHub">
+            <i data-lucide="github" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andy-tshuta-6217a538b" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn" title="LinkedIn">
+            <i data-lucide="linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:andytshuta01@gmail.com" aria-label="Email" title="Email">
+            <i data-lucide="mail" aria-hidden="true"></i>
+          </a>
+          <a href="https://wa.me/243984877099" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+            title="WhatsApp">
+            <i data-lucide="message-circle" aria-hidden="true"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-year"><span></span>2026<span></span></div>
+        <p>Andy Tshuta — Designed &amp; Developed with passion</p>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>

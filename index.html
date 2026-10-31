@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f3f2ed" id="meta-theme-color" />
+  <meta name="description" content="Andy Tshuta - Developer, Videographer & Photographer" />
+  <title>Andy Tshuta | Portfolio</title>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("portfolio-theme");
+        var theme = saved || "light";
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) { }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@0.487.0/dist/umd/lucide.min.js" defer></script>
+</head>
+
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient-orb orb-one"></div>
+    <div class="ambient-orb orb-two"></div>
+    <div class="ambient-orb orb-three"></div>
+    <div class="ambient-grid"></div>
+  </div>
+
+  <nav class="floating-nav" id="floating-nav" aria-label="Navigation principale">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Andy Tshuta, accueil">
+        <span class="brand-mark">AT</span>
+        <span class="brand-name">Andy Tshuta</span>
+      </a>
+      <div class="nav-links">
+        <button class="nav-choice is-active" data-section-switch="dev">Dev</button>
+        <button class="nav-choice" data-section-switch="video">Video</button>
+        <button class="nav-choice" data-section-switch="photo">Photo</button>
+        <a class="nav-choice" href="about.html">À propos</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème" title="Basculer le thème">
+          <i data-lucide="sun" class="theme-icon-sun" aria-hidden="true"></i>
+          <i data-lucide="moon" class="theme-icon-moon" aria-hidden="true"></i>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+          <i data-lucide="menu" class="menu-open-icon" aria-hidden="true"></i>
+          <i data-lucide="x" class="menu-close-icon" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-links" id="mobile-links" hidden>
+      <button data-section-switch="dev">Development</button>
+      <button data-section-switch="video">Video</button>
+      <button data-section-switch="photo">Photo</button>
+      <a class="nav-choice" href="about.html">À propos</a>
+      <button class="mobile-theme-toggle" id="mobile-theme-toggle" aria-label="Changer de thème">
+        <i data-lucide="sun" class="theme-icon-sun" aria-hidden="true"></i>
+        <i data-lucide="moon" class="theme-icon-moon" aria-hidden="true"></i>
+        <span class="theme-label-text">Mode sombre</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── COVER SPLASH (intro pleine page) ── -->
+  <section class="cover-splash" id="cover-splash" aria-label="Page de couverture">
+    <img src="cover-hero.png" alt="Triptique : vidéaste, photographe, développeur" class="cover-splash-img" />
+    <div class="cover-splash-overlay"></div>
+    <div class="cover-splash-content">
+      <h1 class="cover-splash-title">PORTFOLIO</h1>
+    </div>
+    <a class="cover-splash-scroll" href="#top" aria-label="Voir la page d'accueil">
+      <span>Découvrir</span>
+      <i data-lucide="chevrons-down" aria-hidden="true"></i>
+    </a>
+  </section>
+
+  <main class="page-shell" id="top">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <!-- Hero background (dark gradient) -->
+      <div class="hero-cover" aria-hidden="true">
+        <div class="hero-cover-gradient"></div>
+        <div class="hero-cover-glow"></div>
+      </div>
+      <div class="hero-shade"></div>
+
+      <!-- Hero Profile Band (clean typography on top of background) -->
+      <div class="hero-profile-band">
+        <div class="hero-profile-info reveal-hero">
+          <p class="eyebrow">CREATIVE TECHNOLOGIST &amp; VISUAL ARTIST</p>
+          <h1 class="hero-title" id="hero-title">Andy Tshuta</h1>
+          <div class="hero-profile-actions">
+            <a class="hero-btn hero-btn-about" id="btn-about" href="about.html">
+              <i data-lucide="user" aria-hidden="true"></i>
+              À propos
+            </a>
+            <a class="hero-btn hero-btn-cv" id="btn-cv" href="#" download aria-label="Télécharger mon CV">
+              <i data-lucide="download" aria-hidden="true"></i>
+              Télécharger mon CV
+            </a>
+            <a class="hero-btn hero-btn-contact" href="about.html#contact">
+              <i data-lucide="mail" aria-hidden="true"></i>
+              Me contacter
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom content (roles switcher + stats) -->
+      <div class="hero-content">
+        <div class="title-rule reveal-hero"></div>
+
+        <div class="role-switcher reveal-hero" aria-label="Choisir une spécialité">
+          <button class="role-button is-active" data-section-switch="dev">
+            <span class="role-icon" aria-hidden="true"><i data-lucide="code-2"></i></span>
+            <span class="role-label">Development</span>
+            <span class="role-count">15+ Projects</span>
+          </button>
+          <button class="role-button" data-section-switch="video">
+            <span class="role-icon" aria-hidden="true"><i data-lucide="video"></i></span>
+            <span class="role-label">Video</span>
+            <span class="role-count">20+ Films</span>
+          </button>
+          <button class="role-button" data-section-switch="photo">
+            <span class="role-icon" aria-hidden="true"><i data-lucide="camera"></i></span>
+            <span class="role-label">Photography</span>
+            <span class="role-count">500+ Shots</span>
+          </button>
+        </div>
+
+        <!-- Electronic scoreboard ticker -->
+        <div class="scoreboard reveal-hero" id="scoreboard" aria-live="polite" aria-label="Statistiques">
+          <div class="scoreboard-screen">
+            <div class="scoreboard-led-bar">
+              <span class="led"></span><span class="led"></span><span class="led"></span>
+              <span class="scoreboard-label-top">STATISTIQUES</span>
+              <span class="led"></span><span class="led"></span><span class="led"></span>
+            </div>
+            <div class="scoreboard-display">
+              <div class="scoreboard-value-wrap">
+                <span class="scoreboard-value" id="sb-value">4+</span>
+              </div>
+              <div class="scoreboard-label-wrap">
+                <span class="scoreboard-label" id="sb-label">Ans d'expérience</span>
+              </div>
+            </div>
+            <div class="scoreboard-dots">
+              <button class="sb-dot is-active" data-idx="0" aria-label="Expérience"></button>
+              <button class="sb-dot" data-idx="1" aria-label="Clients"></button>
+              <button class="sb-dot" data-idx="2" aria-label="Récompenses"></button>
+            </div>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#portfolio">SCROLL TO EXPLORE</a>
+      </div>
+    </section>
+
+    <section class="portfolio-section" id="portfolio" aria-labelledby="section-title">
+      <div class="content-wrap">
+        <div class="section-heading reveal">
+          <span class="section-kicker" id="section-kicker">01 / DIGITAL CRAFT</span>
+          <h2 id="section-title">Développement</h2>
+        </div>
+
+        <div class="dev-tabs reveal" id="dev-tabs" role="tablist" aria-label="Contenu développement">
+          <button class="view-tab is-active" data-view="services" role="tab" aria-selected="true">Services</button>
+          <button class="view-tab" data-view="stack" role="tab" aria-selected="false">Mes Stack</button>
+          <button class="view-tab" data-view="projects" role="tab" aria-selected="false">Mes Projets</button>
+        </div>
+
+        <div class="project-content" id="project-content" aria-live="polite"></div>
+
+        <section class="contact reveal" aria-labelledby="contact-title">
+          <div class="contact-frame" aria-hidden="true"></div>
+          <span class="section-kicker">HAVE A PROJECT IN MIND?</span>
+          <h2 id="contact-title">Let's Work Together</h2>
+          <div class="title-rule"></div>
+          <p class="contact-copy">Disponible pour des projets freelance et collaborations créatives</p>
+          <p class="contact-subcopy">Transformons vos idées en réalité</p>
+          <div class="contact-actions">
+            <a class="contact-link" href="mailto:andytshuta01@gmail.com"><i data-lucide="mail" aria-hidden="true"></i>
+              andytshuta01@gmail.com</a>
+            <a class="contact-link" href="https://wa.me/243984877099" target="_blank" rel="noopener noreferrer"><i
+                data-lucide="message-circle" class="whatsapp-icon" aria-hidden="true"></i> WhatsApp</a>
+          </div>
+          <div class="social-links" aria-label="Réseaux sociaux">
+            <a href="https://github.com/andytshuta01-web" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+              title="GitHub"><i data-lucide="github" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/andy-tshuta-6217a538b" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn" title="LinkedIn"><i data-lucide="linkedin" aria-hidden="true"></i></a>
+            <a href="mailto:andytshuta01@gmail.com" aria-label="Email" title="Email"><i data-lucide="mail"
+                aria-hidden="true"></i></a>
+            <a href="https://wa.me/243984877099" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+              title="WhatsApp"><i data-lucide="message-circle" aria-hidden="true"></i></a>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <div class="footer-year"><span></span>2026<span></span></div>
+          <p>Designed &amp; Developed with passion</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="project-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" aria-label="Fermer"><i data-lucide="x"
+          aria-hidden="true"></i></button>
+      <div id="modal-content"></div>
+    </article>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
